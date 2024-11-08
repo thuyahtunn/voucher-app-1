@@ -1,0 +1,275 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "product_name": "banana",
+      "price": 300,
+      "created_at": "2024-10-22T10:20:15Z"
+    },
+    {
+      "id": 3,
+      "product_name": "orange",
+      "price": 400,
+      "created_at": "2024-10-07T05:25:30Z"
+    },
+    {
+      "id": 4,
+      "product_name": "mango",
+      "price": 600,
+      "created_at": "2024-09-10T07:10:55Z"
+    },
+    {
+      "id": 5,
+      "product_name": "grape",
+      "price": 450,
+      "created_at": "2024-09-20T08:30:45Z"
+    },
+    {
+      "id": 6,
+      "product_name": "pear",
+      "price": 350,
+      "created_at": "2024-09-15T13:25:10Z"
+    },
+    {
+      "product_name": "watermelon par",
+      "price": 700,
+      "created_at": "2024-11-04T12:43:45.684Z",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "product_name": "pineapple",
+      "price": 750,
+      "created_at": "2024-10-03T20:44:17Z"
+    },
+    {
+      "id": 9,
+      "product_name": "blueberry",
+      "price": 800,
+      "created_at": "2024-10-08T20:15:33Z"
+    },
+    {
+      "product_name": "kyawl gaw thee",
+      "price": 500,
+      "created_at": "2024-11-04T12:43:29.115Z",
+      "id": 10
+    },
+    {
+      "product_name": "name",
+      "price": 300,
+      "created_at": "2024-11-04T16:42:39.228Z",
+      "id": 11
+    },
+    {
+      "product_name": "buuthee",
+      "price": 1000,
+      "id": 12
+    }
+  ],
+  "vouchers": [
+    {
+      "invoice_id": "INV-20241104-7666",
+      "customer_name": "zaw zaw",
+      "customer_email": "zaw@gmail.com",
+      "sale_date": "2024-11-04",
+      "records": [
+        {
+          "id": 1730724272980,
+          "currentProduct": {
+            "id": 3,
+            "product_name": "orange",
+            "price": "400",
+            "created_at": "2024-10-07T05:25:30Z"
+          },
+          "price": "400",
+          "quantity": 5,
+          "cost": 2000
+        },
+        {
+          "id": 1730724281548,
+          "currentProduct": {
+            "product_name": "kyawl gaw thee",
+            "price": "2000",
+            "created_at": "2024-11-04T12:43:29.115Z",
+            "id": 10
+          },
+          "price": "2000",
+          "quantity": 6,
+          "cost": 12000
+        },
+        {
+          "id": 1730724308660,
+          "currentProduct": {
+            "id": 2,
+            "product_name": "banana",
+            "price": "300",
+            "created_at": "2024-10-22T10:20:15Z"
+          },
+          "price": "300",
+          "quantity": "3",
+          "cost": 900
+        }
+      ],
+      "total": 14900,
+      "tax": 745,
+      "netTotal": 15645,
+      "id": 3
+    },
+    {
+      "invoice_id": "INV-20241104-1263",
+      "customer_name": "tuntun",
+      "customer_email": "tun@gmail.com",
+      "sale_date": "2024-11-04",
+      "records": [
+        {
+          "id": 1730726108704,
+          "currentProduct": {
+            "id": 4,
+            "product_name": "mango",
+            "price": "600",
+            "created_at": "2024-09-10T07:10:55Z"
+          },
+          "price": "600",
+          "quantity": "3",
+          "cost": 1800
+        },
+        {
+          "id": 1730726119109,
+          "currentProduct": {
+            "product_name": "apple ly par",
+            "price": "1200",
+            "created_at": "2024-11-03T09:12:20.456Z",
+            "id": 1
+          },
+          "price": "1200",
+          "quantity": "2",
+          "cost": 2400
+        },
+        {
+          "id": 1730726123380,
+          "currentProduct": {
+            "product_name": "kyawl gaw thee",
+            "price": "2000",
+            "created_at": "2024-11-04T12:43:29.115Z",
+            "id": 10
+          },
+          "price": "2000",
+          "quantity": "4",
+          "cost": 8000
+        },
+        {
+          "id": 1730726126052,
+          "currentProduct": {
+            "id": 5,
+            "product_name": "grape",
+            "price": "450",
+            "created_at": "2024-09-20T08:30:45Z"
+          },
+          "price": "450",
+          "quantity": "3",
+          "cost": 1350
+        }
+      ],
+      "total": 13550,
+      "tax": 677.5,
+      "netTotal": 14227.5,
+      "id": 4
+    },
+    {
+      "invoice_id": "INV-20241104-9115",
+      "customer_name": "honey",
+      "customer_email": "honey@gmail.com",
+      "sale_date": "2024-11-04",
+      "records": [
+        {
+          "id": 1730726153254,
+          "currentProduct": {
+            "id": 2,
+            "product_name": "banana",
+            "price": "300",
+            "created_at": "2024-10-22T10:20:15Z"
+          },
+          "price": "300",
+          "quantity": "5",
+          "cost": 1500
+        },
+        {
+          "id": 1730726156326,
+          "currentProduct": {
+            "id": 4,
+            "product_name": "mango",
+            "price": "600",
+            "created_at": "2024-09-10T07:10:55Z"
+          },
+          "price": "600",
+          "quantity": "3",
+          "cost": 1800
+        },
+        {
+          "id": 1730726159276,
+          "currentProduct": {
+            "id": 8,
+            "product_name": "pineapple",
+            "price": "750",
+            "created_at": "2024-10-03T20:44:17Z"
+          },
+          "price": "750",
+          "quantity": "2",
+          "cost": 1500
+        }
+      ],
+      "total": 4800,
+      "tax": 240,
+      "netTotal": 5040,
+      "id": 5
+    },
+    {
+      "invoice_id": "INV-20241104-9103",
+      "customer_name": "htoo",
+      "customer_email": "htoo@gmail.com",
+      "sale_date": "2024-11-04",
+      "records": [
+        {
+          "id": 1730726238283,
+          "currentProduct": {
+            "id": 2,
+            "product_name": "banana",
+            "price": "300",
+            "created_at": "2024-10-22T10:20:15Z"
+          },
+          "price": "300",
+          "quantity": "2",
+          "cost": 600
+        },
+        {
+          "id": 1730726240745,
+          "currentProduct": {
+            "id": 4,
+            "product_name": "mango",
+            "price": "600",
+            "created_at": "2024-09-10T07:10:55Z"
+          },
+          "price": "600",
+          "quantity": "3",
+          "cost": 1800
+        },
+        {
+          "id": 1730726243815,
+          "currentProduct": {
+            "product_name": "watermelon par",
+            "price": "700",
+            "created_at": "2024-11-04T12:43:45.684Z",
+            "id": 7
+          },
+          "price": "700",
+          "quantity": "2",
+          "cost": 1400
+        }
+      ],
+      "total": 3800,
+      "tax": 190,
+      "netTotal": 3990,
+      "id": 6
+    }
+  ]
+}

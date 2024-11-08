@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "apple",
+      "price": "500",
+      "created_at": "2024-10-20T14:30:45Z"
+    },
+    {
+      "id": 2,
+      "product_name": "banana",
+      "price": "300",
+      "created_at": "2024-10-22T10:20:15Z"
+    },
+    {
+      "id": 3,
+      "product_name": "orange",
+      "price": "400",
+      "created_at": "2024-10-07T05:25:30Z"
+    },
+    {
+      "id": 4,
+      "product_name": "mango",
+      "price": "600",
+      "created_at": "2024-09-10T07:10:55Z"
+    },
+    {
+      "id": 5,
+      "product_name": "grape",
+      "price": "450",
+      "created_at": "2024-09-20T08:30:45Z"
+    },
+    {
+      "id": 6,
+      "product_name": "pear",
+      "price": "350",
+      "created_at": "2024-09-15T13:25:10Z"
+    },
+    {
+      "id": 7,
+      "product_name": "watermelon",
+      "price": "700",
+      "created_at": "2024-09-25T15:10:33Z"
+    },
+    {
+      "id": 8,
+      "product_name": "pineapple",
+      "price": "750",
+      "created_at": "2024-10-03T20:44:17Z"
+    },
+    {
+      "id": 9,
+      "product_name": "blueberry",
+      "price": "800",
+      "created_at": "2024-10-08T20:15:33Z"
+    }
+  ]
+}
