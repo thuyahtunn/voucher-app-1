@@ -5,14 +5,13 @@ import ProductCreateForm from "../components/ProductCreateForm";
 
 const CreateProductPage = () => {
   return (
-    // <Container>
-    //   <BreadCrumb
-    //     pageTitle={"Create Product"}
-    //     links={[{ currentPageTitle: "Product", pathName: "/product" }]}
-    //   />
-    //   <ProductCreateForm />
-    // </Container>
-    <p>ProductCreatePage</p>
+    <Container>
+      <BreadCrumb
+        pageTitle={"Create Product"}
+        links={[{ currentPageTitle: "Product", pathName: "/product" }]}
+      />
+      <ProductCreateForm />
+    </Container>
   );
 };
 

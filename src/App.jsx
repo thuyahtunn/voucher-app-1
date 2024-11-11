@@ -11,6 +11,10 @@ import EditProductPage from "./pages/EditProductPage";
 import VoucherDetailPage from "./pages/VoucherDetailPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import UserProfilePage from "./pages/UserProfilePage";
+import ChangeUserNamePage from "./pages/ChangeUserNamePage";
+import ChangeUserPasswordPage from "./pages/ChangeUserPasswordPage";
+import ChangeUserImagePage from "./pages/ChangeUserImagePage";
 
 const App = () => {
   return (
@@ -36,6 +40,18 @@ const App = () => {
           <Route path="product/create" element={<CreateProductPage />} />
           <Route path="product/edit/:id" element={<EditProductPage />} />
           <Route path="voucher/detail/id" element={<VoucherDetailPage />} />
+          <Route path="user-profile">
+            <Route index element={<UserProfilePage />} />
+            <Route path="change-name" element={<ChangeUserNamePage />} />
+            <Route
+              path="change-password"
+              element={<ChangeUserPasswordPage />}
+            />
+            <Route
+              path="change-profile-image"
+              element={<ChangeUserImagePage />}
+            />
+          </Route>
         </Route>
       </Route>
 

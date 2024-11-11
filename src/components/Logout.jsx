@@ -6,6 +6,7 @@ const Logout = () => {
   const nav = useNavigate();
   const handleLogout = () => {
     removeCookie("token");
+    removeCookie("user");
     nav("/");
   };
   return (

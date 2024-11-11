@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { apiUrl } from "../api/constant";
 import useCookie from "react-use-cookie";
+import useUserDataStore from "../store/useUserDataStore";
 
 const LoginPage = () => {
   const {
@@ -11,7 +12,17 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
   const [userToken, setUserToken] = useCookie("token");
+  const [userData, setUserData] = useCookie("user");
+  if (userToken) {
+    return <Navigate to={"/dashboard"} />;
+  }
+  // useEffect(() => {
+  //   if (userToken) {
+  //     return <Navigate to={"/dashboard"} />;
+  //   }
+  // })
   const nav = useNavigate();
+  const { user, setUser } = useUserDataStore();
   const handleLogin = async (data) => {
     const res = await fetch(`${apiUrl}/login`, {
       method: "POST",
@@ -21,9 +32,13 @@ const LoginPage = () => {
       },
     });
     const json = await res.json();
-    setUserToken(json.token, {
-      days: 365,
-    });
+    if (res.status === 200) {
+      setUserToken(json.token, {
+        days: 365,
+      });
+      setUserData(JSON.stringify(json.user));
+    }
+
     if (json.token) {
       nav("/dashboard");
     }

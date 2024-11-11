@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { bouncy } from "ldrs";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "../api/constant";
+import reactUseCookie from "react-use-cookie";
 
 const ProductCreateForm = () => {
   const {
@@ -12,25 +14,27 @@ const ProductCreateForm = () => {
   } = useForm();
   const [sending, setSending] = useState(false);
   const nav = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const [userToken] = reactUseCookie("token");
 
   const handleForm = async (data) => {
     setSending(true);
-    await fetch(`${apiUrl}/products`, {
+    const res = await fetch(`${apiUrl}/products`, {
       method: "POST",
       body: JSON.stringify({
         product_name: data.product_name,
         price: data.product_price,
-        created_at: new Date().toISOString(),
       }),
       headers: {
         "Content-Type": "application/json",
+
+        Authorization: `Bearer ${userToken}`,
       },
     });
+    console.log(res);
 
     reset();
     if (data.back_to_product) {
-      nav(`/product`);
+      nav(`/dashboard/product`);
     }
     setSending(false);
   };

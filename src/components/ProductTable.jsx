@@ -7,9 +7,16 @@ import { HiPlus, HiSearch, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { apiUrl } from "../api/constant";
 import { debounce } from "lodash";
+import reactUseCookie from "react-use-cookie";
 
 const ProductTable = () => {
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const [userToken] = reactUseCookie("token");
+  const fetcher = (args) =>
+    fetch(args, {
+      headers: {
+        Authorization: `Bearer ${userToken}`,
+      },
+    }).then((res) => res.json());
   const [search, setSearch] = useState("");
   const searchRef = useRef("");
   const handleSearchOnChange = debounce((event) => {
@@ -53,7 +60,7 @@ const ProductTable = () => {
           )}
         </div>
         <Link
-          to={"/product/create"}
+          to={"/dashboard/product/create"}
           className=" flex justify-center items-center py-2.5 px-6 bg-stone-700 text-gray-50 text-sm rounded-lg font-medium  gap-2 border border-stone-700"
         >
           Add New Product
@@ -86,11 +93,15 @@ const ProductTable = () => {
               <SkeletonLoaderRows />
             ) : (
               <>
-                {data.length === 0 ? (
+                {data.data.length === 0 ? (
                   <EmptyProduct />
                 ) : (
-                  data.map((product) => (
-                    <ProductRow key={product.id} product={product} />
+                  data.data.map((product, index) => (
+                    <ProductRow
+                      key={product.id}
+                      index={index}
+                      product={product}
+                    />
                   ))
                 )}
               </>

@@ -5,7 +5,10 @@ import { dotSpinner } from "ldrs";
 import { useNavigate } from "react-router-dom";
 import ShowDate from "./ShowDate.jsx";
 
-const ProductRow = ({ product: { id, product_name, price, created_at } }) => {
+const ProductRow = ({
+  product: { id, product_name, price, created_at },
+  index,
+}) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const nav = useNavigate();
@@ -39,7 +42,7 @@ const ProductRow = ({ product: { id, product_name, price, created_at } }) => {
   };
   return (
     <tr className="bg-white border-b font-medium">
-      <td className="px-6 py-4">{id}</td>
+      <td className="px-6 py-4">{index + 1}</td>
       <th scope="row" className="px-6 py-4 text-gray-700 whitespace-nowrap ">
         {product_name}
       </th>

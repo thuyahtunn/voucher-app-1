@@ -5,11 +5,10 @@ import ProductTable from "../components/ProductTable";
 
 const ProductPage = () => {
   return (
-    // <Container>
-    //   <BreadCrumb pageTitle={"Products"} />
-    //   <ProductTable />
-    // </Container>
-    <p>ProductPage</p>
+    <Container>
+      <BreadCrumb pageTitle={"Products"} />
+      <ProductTable />
+    </Container>
   );
 };
 
